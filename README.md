@@ -2,7 +2,7 @@
 - Tells average time taken to solving question of various difficulties.
 
 ## Tech Stack
-- React
+- React(server side rendering)
 - Express
 
 ## Data source
