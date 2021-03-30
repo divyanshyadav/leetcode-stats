@@ -28,7 +28,8 @@ function createPayload(data) {
             easy: getAvgTime(questions.filter(q => q.difficulty === 'easy')),
             medium: getAvgTime(questions.filter(q => q.difficulty === 'medium')),
             hard: getAvgTime(questions.filter(q => q.difficulty === 'hard'))
-        }
+        },
+        questions
     }
 }
 

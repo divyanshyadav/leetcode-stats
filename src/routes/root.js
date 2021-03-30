@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
   const theHtml = `
     <html>
       <head>
-        <title>Sheet-Analysis</title>
+        <title>Leetcode stats</title>
       </head>
       <body>
         <div id="app">{{{app}}}</div>
