@@ -1,6 +1,6 @@
 # leetcode-stats
 - Tells average time taken to solve questions according to difficulties.
-- Tells which questions taken more than 1 hour to solve.
+- Tells which questions have taken more than 1 hour to solve.
 
 ## Tech Stack
 - React (server side rendering)
