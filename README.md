@@ -1,5 +1,5 @@
 # leetcode-stats
--Tells average time taken to solving question of various difficulties.
+- Tells average time taken to solving question of various difficulties.
 
 ## Tech Stack
 - React
