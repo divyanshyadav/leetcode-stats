@@ -1,6 +1,6 @@
 import express from "express";
 import { getSheetRows } from '../google-sheets-apis';
-import { getSeconds } from '../utils'
+import { getSeconds } from '../utils/date'
 
 const router = express.Router();
 

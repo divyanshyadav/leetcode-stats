@@ -1,5 +1,5 @@
 import React from "react";
-import { getSeconds, secondsToHms } from '../utils'
+import { getSeconds, secondsToHms, isToday } from '../utils/date'
 
 function App() {
   const [data, setData] = React.useState({
@@ -26,22 +26,38 @@ function App() {
         <div>{'Hard: ' + secondsToHms(data.avgTime.hard)}</div>
       </div>
       <div>
-        <h2>Taken more than 1 hour to solve</h2>
-        <table border="1">
-          {data.questions
+        <h2>Solved today</h2>
+        <Table questions={data.questions.filter(q => isToday(q.date))}/>
+      </div>
+      <div>
+        <h2>Time take >= 1 hour</h2>
+        <Table 
+          questions={data.questions
             .filter(q => getSeconds(q.timeSpend) >= 60 * 60)
-            .sort((a, b) => getSeconds(b.timeSpend) - getSeconds(a.timeSpend))
-            .map(q => {
-              return (
-                <tr>
-                  <td><a href={q.link} target="_blank" rel="noopener noreferrer">{q.link}</a></td>
-                  <td>{secondsToHms(getSeconds(q.timeSpend))}</td>
-                </tr>
-              )
-            })}
-        </table>
+            .sort((a, b) => getSeconds(b.timeSpend) - getSeconds(a.timeSpend))}
+        />
       </div>
     </div>
+  )
+}
+
+function Table ({ questions = [] }) {
+  if (questions.length === 0) return null
+
+  return (
+    <table border="1">
+      <tbody>
+        {questions
+        .map((q, index) => {
+          return (
+            <tr key={index}>
+              <td><a href={q.link} target="_blank" rel="noopener noreferrer">{q.link}</a></td>
+              <td>{secondsToHms(getSeconds(q.timeSpend))}</td>
+            </tr>
+          )
+        })}
+      </tbody>
+  </table>
   )
 }
 

@@ -26,7 +26,7 @@ const config = {
   resolve: {
     extensions: [".js", ".jsx", ".json", ".wasm", ".mjs", "*"]
   },
-  mode: 'production'
+  mode: 'development'
 };
 
 module.exports = config;
