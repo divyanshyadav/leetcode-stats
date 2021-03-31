@@ -13,6 +13,7 @@
 - [ ] Lint on save
 - [ ] Add constants file
 - [ ] Add auto refresh on save for React
+- [ ] Avg. questions solved daily
 
 ## Tech Stack
 - React (server side rendering)
