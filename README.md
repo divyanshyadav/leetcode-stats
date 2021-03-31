@@ -9,6 +9,8 @@
 - []  Count questions solved by difficulty 
 - []  Deploy to Heruko
 - []  Improve table UI
+- []  Add eslint
+- []  Lint on save
 
 ## Tech Stack
 - React (server side rendering)
