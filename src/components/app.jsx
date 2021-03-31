@@ -4,6 +4,7 @@ import { getSeconds, secondsToHms, isToday } from '../utils/date'
 function App() {
   const [data, setData] = React.useState({
     avgTime: {
+      all: 0,
       easy: 0,
       medium: 0,
       hard: 0
@@ -20,7 +21,8 @@ function App() {
     <div>
       <h1>Leetcode stats</h1>
       <div>
-        <h2>Avg. Time</h2>
+        <h2>Avg. time to solve</h2>
+        <div>{'All: ' + secondsToHms(data.avgTime.all)}</div>
         <div>{'Easy: ' + secondsToHms(data.avgTime.easy)}</div>
         <div>{'Medium: ' + secondsToHms(data.avgTime.medium)}</div>
         <div>{'Hard: ' + secondsToHms(data.avgTime.hard)}</div>
