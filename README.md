@@ -12,6 +12,7 @@
 - [ ] Add eslint
 - [ ] Lint on save
 - [ ] Add constants file
+- [ ] Add auto refresh on save for React
 
 ## Tech Stack
 - React (server side rendering)

@@ -32,7 +32,7 @@ function App() {
         <Table questions={data.questions.filter(q => isToday(q.date))}/>
       </div>
       <div>
-        <h2>Time take >= 1 hour</h2>
+        <h2>Time taken >= 1 hour</h2>
         <Table 
           questions={data.questions
             .filter(q => getSeconds(q.timeSpend) >= 60 * 60)
