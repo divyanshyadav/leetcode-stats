@@ -14,6 +14,7 @@
 - [ ] Add constants file
 - [ ] Add auto refresh on save for React
 - [ ] Avg. questions solved daily
+- [ ] Add question page
 
 ## Tech Stack
 - React (server side rendering)
