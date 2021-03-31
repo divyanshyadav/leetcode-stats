@@ -11,6 +11,7 @@
 - [ ] Improve table UI
 - [ ] Add eslint
 - [ ] Lint on save
+- [ ] Add constants file
 
 ## Tech Stack
 - React (server side rendering)
