@@ -32,8 +32,8 @@ function App() {
         <Table questions={data.questions.filter(q => isToday(q.date))}/>
       </div>
       <div>
-        <h2>Time taken >= 1 hour</h2>
-        <Table 
+        <h2>Questions taken >= 1 hour to complete</h2>
+        <Table
           questions={data.questions
             .filter(q => getSeconds(q.timeSpend) >= 60 * 60)
             .sort((a, b) => getSeconds(b.timeSpend) - getSeconds(a.timeSpend))}
