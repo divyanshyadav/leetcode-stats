@@ -7,7 +7,7 @@
 - [ ] Count questions solved by topics
 - [ ] Get all done questions from Leetcode
 - [ ] Count questions solved by difficulty 
-- [ ] Deploy to Heruko
+- [ ] Deploy on Heruko
 - [ ] Improve table UI
 - [ ] Add eslint
 - [ ] Lint on save
