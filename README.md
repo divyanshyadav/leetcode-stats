@@ -17,6 +17,7 @@
 - [ ] Add question page
 - [ ] Color by difficulty, avg.time box
 - [ ] Improve npm project commands
+- [ ] Fix eslint problems in google-sheet-apis.js
 
 ## Tech Stack
 - React (server side rendering)

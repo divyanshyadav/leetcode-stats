@@ -9,7 +9,7 @@ const TOKEN_PATH = 'token.json';
 const CREDENTIALS_PATH = 'credentials.json';
 const SPREADSHEET_ID = '145HJOVF3fzmv2aS-rtRuy8fSEUEt_QTmrZCj3JjZb6M';
 
-async function getSheetRows() {
+export async function getSheetRows() {
     const content = await readFile(CREDENTIALS_PATH);
     const auth = await authorize(JSON.parse(content));
     const rows = await getSheet(auth);
@@ -60,7 +60,7 @@ function saveToken(token) {
     });
 }
 
-export function getSheet(auth) {
+function getSheet(auth) {
     return new Promise((resolve, reject) => {
         const sheets = google.sheets({ version: 'v4', auth });
         sheets.spreadsheets.values.get({
