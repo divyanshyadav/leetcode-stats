@@ -6,8 +6,8 @@
 - [x] List questions that are solved today
 - [x] Count questions solved by difficulty
 - [x] Avg. questions solved daily
-- [ ] (Dev) Add eslint
-- [ ] (Dev) Lint on save
+- [x] (Dev) Add eslint
+- [x] (Dev) Lint on save
 - [ ] (Dev) Add auto refresh on save for React
 - [ ] (Dev) Add constants file
 - [ ] Count questions solved by topics
