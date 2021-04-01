@@ -4,17 +4,18 @@
 - [x] Average time to solve different difficulty question
 - [x] List questions which took more then 1 hour to solve
 - [x] List questions that are solved today
+- [x] Count questions solved by difficulty
+- [x] Avg. questions solved daily
+- [ ] (Dev) Add eslint
+- [ ] (Dev) Lint on save
+- [ ] (Dev) Add auto refresh on save for React
+- [ ] (Dev) Add constants file
 - [ ] Count questions solved by topics
 - [ ] Get all done questions from Leetcode
-- [ ] Count questions solved by difficulty 
 - [ ] Deploy on Heroku
 - [ ] Improve table UI
-- [ ] Add eslint
-- [ ] Lint on save
-- [ ] Add constants file
-- [ ] Add auto refresh on save for React
-- [ ] Avg. questions solved daily
 - [ ] Add question page
+- [ ] Color by difficulty, avg.time box
 
 ## Tech Stack
 - React (server side rendering)
