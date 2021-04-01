@@ -16,6 +16,7 @@
 - [ ] Improve table UI
 - [ ] Add question page
 - [ ] Color by difficulty, avg.time box
+- [ ] Improve npm project commands
 
 ## Tech Stack
 - React (server side rendering)
