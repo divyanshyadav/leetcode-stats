@@ -8,6 +8,8 @@
 - [x] Avg. questions solved daily
 - [x] (Dev) Add eslint
 - [x] (Dev) Lint on save
+- [x] Color by difficulty, avg.time box
+- [x] Add time chart using https://github.com/uber/react-vis
 - [ ] (Dev) Add auto refresh on save for React
 - [ ] (Dev) Add constants file
 - [ ] Count questions solved by topics
@@ -15,9 +17,9 @@
 - [ ] Deploy on Heroku
 - [ ] Improve table UI
 - [ ] Add question page
-- [ ] Color by difficulty, avg.time box
 - [ ] Improve npm project commands
 - [ ] Fix eslint problems in google-sheet-apis.js
+- [ ] Analyse Leetcode api response https://leetcode.com/api/problems/algorithms/
 
 ## Tech Stack
 - React (server side rendering)
