@@ -10,6 +10,7 @@
 - [x] (Dev) Lint on save
 - [x] Color by difficulty, avg.time box
 - [x] Add time chart using https://github.com/uber/react-vis
+- [ ] Plot time chart by question difficulty
 - [ ] (Dev) Add auto refresh on save for React
 - [ ] (Dev) Add constants file
 - [ ] Count questions solved by topics
