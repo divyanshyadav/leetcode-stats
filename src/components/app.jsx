@@ -1,6 +1,7 @@
 import React from 'react';
 import { getSeconds, secondsToHms, isToday } from '../utils/date';
 import Chart from './Chart';
+import { getColorByTimeRange } from '../utils/color';
 
 function App() {
     const [data, setData] = React.useState({
@@ -19,14 +20,25 @@ function App() {
     }, []);
 
     return (
-        <div>
+        <div style={{ margin: 'auto', width: '50%' }}>
             <h1>Leetcode stats</h1>
             <div>
-                <Chart data={data.questions.reduce((acc, question, index) => {
-                    const { timeSpend } = question;
-                    acc.push({ y: getSeconds(timeSpend) / (60 * 60), x: index + 1 });
-                    return acc;
-                }, [])}
+                <Chart
+                    data={data.questions.filter((q) => q.difficulty === 'hard').reduce((acc, question, index) => {
+                        const { timeSpend } = question;
+                        acc.push({ y: getSeconds(timeSpend) / (60), x: index + 1 });
+                        return acc;
+                    }, [])}
+                    data2={data.questions.filter((q) => q.difficulty === 'medium').reduce((acc, question, index) => {
+                        const { timeSpend } = question;
+                        acc.push({ y: getSeconds(timeSpend) / (60), x: index + 1 });
+                        return acc;
+                    }, [])}
+                    data3={data.questions.filter((q) => q.difficulty === 'easy').reduce((acc, question, index) => {
+                        const { timeSpend } = question;
+                        acc.push({ y: getSeconds(timeSpend) / (60), x: index + 1 });
+                        return acc;
+                    }, [])}
                 />
             </div>
             <div>
@@ -39,7 +51,7 @@ function App() {
             </div>
             <div>
                 <h2>AVG. TIME</h2>
-                <AvgTime seconds={data.avgTime.all} label="ALL" />
+                <AvgTime seconds={data.avgTime.all} label="All" />
                 <AvgTime seconds={data.avgTime.easy} label="Easy" />
                 <AvgTime seconds={data.avgTime.medium} label="Medium" />
                 <AvgTime seconds={data.avgTime.hard} label="Hard" />
@@ -75,29 +87,6 @@ function ColorTime({ seconds }) {
             {secondsToHms(seconds)}
         </span>
     );
-}
-
-const COLORS = {
-    GREEN: 'green',
-    RED: 'red',
-    YELLOW: 'rgb(251, 140, 0)',
-};
-
-const SECONDS = {
-    THIRTY_MIN: 30 * 60,
-    ONE_HOUR: 60 * 60,
-};
-
-function getColorByTimeRange(seconds) {
-    if (seconds < SECONDS.THIRTY_MIN) {
-        return COLORS.GREEN;
-    }
-
-    if ((seconds) >= SECONDS.THIRTY_MIN && seconds <= SECONDS.ONE_HOUR) {
-        return COLORS.YELLOW;
-    }
-
-    return COLORS.RED;
 }
 
 function getAvgQuestionsSolvedDaily(questions = []) {
