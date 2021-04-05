@@ -13,15 +13,15 @@
 - [x] Center content of home page
 - [x] Plot time chart by question difficulty
 - [x] (Dev) Add constants file
-- [ ] (Dev) Add auto refresh on save for React
-- [ ] Count questions solved by topics
-- [ ] Get all done questions from Leetcode
+- [x] Improve npm project commands
 - [ ] Deploy on Heroku
+- [ ] (Dev) Add auto refresh on save for React
+- [ ] Analyse Leetcode api response https://leetcode.com/api/problems/algorithms/
+- [ ] Get all done questions from Leetcode
+- [ ] Count questions solved by topics
 - [ ] Improve table UI
 - [ ] Add question page
-- [ ] Improve npm project commands
 - [ ] Fix eslint problems in google-sheet-apis.js
-- [ ] Analyse Leetcode api response https://leetcode.com/api/problems/algorithms/
 
 ## Tech Stack
 - React (server side rendering)
