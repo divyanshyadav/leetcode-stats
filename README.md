@@ -14,7 +14,7 @@
 - [x] Plot time chart by question difficulty
 - [x] (Dev) Add constants file
 - [x] Improve npm project commands
-- [ ] Deploy on Heroku
+- [x] Deploy on Heroku
 - [ ] (Dev) Add auto refresh on save for React
 - [ ] Analyse Leetcode api response https://leetcode.com/api/problems/algorithms/
 - [ ] Get all done questions from Leetcode
