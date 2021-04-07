@@ -10,10 +10,26 @@ const CREDENTIALS_PATH = 'credentials.json';
 const SPREADSHEET_ID = '145HJOVF3fzmv2aS-rtRuy8fSEUEt_QTmrZCj3JjZb6M';
 
 export async function getSheetRows() {
-    const content = await readFile(CREDENTIALS_PATH);
+    const content = await getCredentials(CREDENTIALS_PATH);
     const auth = await authorize(JSON.parse(content));
     const rows = await getSheet(auth);
     return rows;
+}
+
+async function getCredentials(filePath) {
+    if (process.env.GOOGLE_CREDENTIALS) {
+        return process.env.GOOGLE_CREDENTIALS;
+    }
+
+    return readFile(filePath);
+}
+
+async function getToken(filePath) {
+    if (process.env.GOOGLE_ACCESS_TOKEN) {
+        return process.env.GOOGLE_ACCESS_TOKEN;
+    }
+
+    return readFile(filePath);
 }
 
 async function authorize(credentials) {
@@ -22,7 +38,7 @@ async function authorize(credentials) {
 
     let token = '';
     try {
-        token = await readFile(TOKEN_PATH);
+        token = await getToken(TOKEN_PATH);
     } catch (err) {
         token = await getNewToken(oAuth2Client);
         saveToken(token);
