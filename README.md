@@ -22,6 +22,7 @@
 - [ ] Improve table UI
 - [ ] Add question page
 - [ ] Fix eslint problems in google-sheet-apis.js
+- [ ] Auto refresh
 
 ## Tech Stack
 - React (server side rendering)
