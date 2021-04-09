@@ -23,6 +23,7 @@
 - [ ] Add question page
 - [ ] Fix eslint problems in google-sheet-apis.js
 - [ ] Auto refresh
+- [ ] Add dark mode
 
 ## Tech Stack
 - React (server side rendering)
