@@ -24,6 +24,7 @@
 - [ ] Fix eslint problems in google-sheet-apis.js
 - [ ] Auto refresh
 - [ ] Add dark mode
+- [ ] Parse leetcode question url to extract topics
 
 ## Tech Stack
 - React (server side rendering)
