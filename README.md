@@ -22,7 +22,7 @@
 - [ ] Improve table UI
 - [ ] Add question page
 - [ ] Fix eslint problems in google-sheet-apis.js
-- [ ] Auto refresh
+- [ ] Auto refresh if data change in google sheet
 - [ ] Add dark mode
 - [ ] Parse leetcode question url to extract topics
 
