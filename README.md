@@ -15,7 +15,7 @@
 - [x] (Dev) Add constants file
 - [x] Improve npm project commands
 - [x] Deploy on Heroku
-- [ ] (Dev) Add auto refresh on save for React
+- [x] (Dev) Add auto refresh on save for React
 - [ ] Analyse Leetcode api response https://leetcode.com/api/problems/algorithms/
 - [ ] Get all done questions from Leetcode
 - [ ] Count questions solved by topics

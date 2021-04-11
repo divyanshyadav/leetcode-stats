@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/server.js",
-    "start:dev": "nodemon --exec babel-node src/server.js",
+    "start:dev": "nodemon --ignore public --exec babel-node src/server.js",
     "build": "webpack --config webpack.prod.js",
     "build:dev": "webpack -w --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,10 +23,12 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "compression": "^1.7.4",
+    "connect-livereload": "^0.6.1",
     "css-loader": "^5.2.0",
     "express": "^4.17.1",
     "googleapis": "^39.2.0",
     "handlebars": "^4.7.7",
+    "livereload": "^0.9.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-vis": "^1.11.7",
