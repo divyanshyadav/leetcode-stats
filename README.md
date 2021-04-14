@@ -1,5 +1,12 @@
 # leetcode-stats
 
+## Tech Stack
+- React (server side rendering)
+- Express
+
+## Data source
+- Google spreadsheet (maintained separately)
+
 ## Todo
 - [x] Average time to solve different difficulty question
 - [x] List questions which took more then 1 hour to solve
@@ -16,6 +23,8 @@
 - [x] Improve npm project commands
 - [x] Deploy on Heroku
 - [x] (Dev) Add auto refresh on save for React
+- [x] Avg time graph
+- [ ] Avg time graph of question by difficulty
 - [ ] Analyse Leetcode api response https://leetcode.com/api/problems/algorithms/
 - [ ] Get all done questions from Leetcode
 - [ ] Count questions solved by topics
@@ -25,10 +34,5 @@
 - [ ] Auto refresh if data change in google sheet
 - [ ] Add dark mode
 - [ ] Parse leetcode question url to extract topics
-
-## Tech Stack
-- React (server side rendering)
-- Express
-
-## Data source
-- Google spreadsheet (maintained separately)
+- [ ] Leetcode login
+- [ ] Leetcode get question details using graphql

@@ -4,13 +4,16 @@ import {
     XYPlot, LineSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis,
 } from 'react-vis';
 
-function Chart({ data, data2, data3 }) {
+function Chart({
+    data, data2, data3, data4,
+}) {
     return (
         <div>
             <XYPlot height={200} width={600}>
                 <LineSeries curve="curveMonotoneX" data={data} color="red" />
                 <LineSeries curve="curveMonotoneX" data={data2} color="rgb(251, 140, 0)" />
                 <LineSeries curve="curveMonotoneX" data={data3} color="green" />
+                <LineSeries curve="curveMonotoneX" data={data4} color="blue" />
                 <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
                 <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
                 <XAxis

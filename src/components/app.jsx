@@ -1,4 +1,5 @@
 import React from 'react';
+import DiscreteColorLegend from 'react-vis/dist/legends/discrete-color-legend';
 import { getSeconds, secondsToHms, isToday } from '../utils/date';
 import Chart from './Chart';
 import { getColorByTimeRange } from '../utils/color';
@@ -23,6 +24,21 @@ function App() {
         <div style={{ margin: 'auto', width: '50%' }}>
             <h1>Leetcode stats</h1>
             <div>
+                <DiscreteColorLegend
+                    colors={[
+                        'blue',
+                        'red',
+                        'rgb(251, 140, 0)',
+                        'green',
+                    ]}
+                    items={[
+                        'All',
+                        'Hard',
+                        'Medium',
+                        'Easy',
+                    ]}
+                    orientation="horizontal"
+                />
                 <Chart
                     data={data.questions.filter((q) => q.difficulty === 'hard').reduce((acc, question, index) => {
                         const { timeSpend } = question;
@@ -51,6 +67,7 @@ function App() {
             </div>
             <div>
                 <h2>AVG. TIME</h2>
+                <AvgTimeChart questions={data.questions} />
                 <AvgTime seconds={data.avgTime.all} label="All" />
                 <AvgTime seconds={data.avgTime.easy} label="Easy" />
                 <AvgTime seconds={data.avgTime.medium} label="Medium" />
@@ -69,6 +86,42 @@ function App() {
                 />
             </div>
         </div>
+    );
+}
+
+function getData(questions) {
+    const sum = [];
+    for (let i = 0; i < questions.length; i += 1) {
+        if (i === 0) {
+            sum[i] = getSeconds(questions[i].timeSpend);
+        } else {
+            sum[i] = getSeconds(questions[i].timeSpend) + sum[i - 1];
+        }
+    }
+
+    const avgTimes = sum.map((s, index) => ({
+        x: index + 1,
+        y: s / ((index + 1) * 60),
+    }));
+
+    return avgTimes;
+}
+
+function AvgTimeChart({ questions = [] }) {
+    const data = React.useMemo(() => ({
+        all: getData(questions),
+        easy: getData(questions.filter((q) => q.difficulty === 'easy')),
+        medium: getData(questions.filter((q) => q.difficulty === 'medium')),
+        hard: getData(questions.filter((q) => q.difficulty === 'hard')),
+    }), [questions]);
+
+    return (
+        <Chart
+            data={data.hard}
+            data2={data.medium}
+            data3={data.easy}
+            data4={data.all}
+        />
     );
 }
 
