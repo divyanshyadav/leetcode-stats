@@ -9,7 +9,13 @@ function Chart({
 }) {
     return (
         <div>
-            <XYPlot height={200} width={600}>
+            <XYPlot
+                height={200}
+                width={600}
+                margin={{
+                    left: 60,
+                }}
+            >
                 <LineSeries curve="curveMonotoneX" data={data} color="red" />
                 <LineSeries curve="curveMonotoneX" data={data2} color="rgb(251, 140, 0)" />
                 <LineSeries curve="curveMonotoneX" data={data3} color="green" />
@@ -25,12 +31,12 @@ function Chart({
                     }}
                 />
                 <YAxis
-                    title="minutes"
                     style={{
                         line: { stroke: '#ADDDE1' },
                         ticks: { stroke: '#ADDDE1' },
                         text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600 },
                     }}
+                    tickFormat={(d) => `${d} mins`}
                 />
             </XYPlot>
         </div>
