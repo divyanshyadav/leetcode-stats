@@ -2,6 +2,7 @@ export const COLORS = {
     GREEN: 'green',
     RED: 'red',
     YELLOW: 'rgb(251, 140, 0)',
+    BLUE: 'blue',
 };
 
 export const SECONDS = {

@@ -3,6 +3,7 @@ import DiscreteColorLegend from 'react-vis/dist/legends/discrete-color-legend';
 import { getSeconds, secondsToHms, isToday } from '../utils/date';
 import Chart from './Chart';
 import { getColorByTimeRange } from '../utils/color';
+import { COLORS } from '../constants';
 
 function App() {
     const [data, setData] = React.useState({
@@ -26,10 +27,10 @@ function App() {
             <div>
                 <DiscreteColorLegend
                     colors={[
-                        'blue',
-                        'red',
-                        'rgb(251, 140, 0)',
-                        'green',
+                        COLORS.BLUE,
+                        COLORS.RED,
+                        COLORS.YELLOW,
+                        COLORS.GREEN,
                     ]}
                     items={[
                         'All',

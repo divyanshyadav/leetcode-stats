@@ -36,3 +36,4 @@
 - [ ] Parse leetcode question url to extract topics
 - [ ] Leetcode login
 - [ ] Leetcode get question details using graphql
+- [ ] Day chart
